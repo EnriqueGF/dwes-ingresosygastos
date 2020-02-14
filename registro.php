@@ -8,7 +8,7 @@ if (isset($_POST["user"]) && isset($_POST["password"])) {
     $password = password_hash($_POST["password"], PASSWORD_BCRYPT);
 
     try {
-        $dsn = "mysql:$DB_HOST=$DB_HOST;dbname=$DB_DATABASE";
+        $dsn = "mysql:host=$DB_HOST;dbname=$DB_DATABASE";
         $dbh = new PDO($dsn, $DB_USERNAME, $DB_PASSWORD);
 
         $stmt = $dbh->prepare("SELECT * FROM users WHERE username = :username");

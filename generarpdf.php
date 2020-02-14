@@ -5,7 +5,7 @@ session_start();
 
 if (!isset($_SESSION["logged"])) {return;}
 
-$dsn = "mysql:$DB_HOST=$DB_HOST;dbname=$DB_DATABASE";
+$dsn = "mysql:host=$DB_HOST;dbname=$DB_DATABASE";
 $dbh = new PDO($dsn, $DB_USERNAME, $DB_PASSWORD);
 $usuario = $_SESSION["username"];
 
@@ -35,7 +35,7 @@ $mpdf->WriteHTML('<style type="text/css">
   </tr>
 ');
 
-$dsn = "mysql:$DB_HOST=$DB_HOST;dbname=$DB_DATABASE";
+$dsn = "mysql:host=$DB_HOST;dbname=$DB_DATABASE";
 $dbh = new PDO($dsn, $DB_USERNAME, $DB_PASSWORD);
 
 

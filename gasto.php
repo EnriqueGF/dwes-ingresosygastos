@@ -9,7 +9,7 @@ if (isset($_POST["fecha"]) && isset($_POST["descripcion"]) && isset($_POST["cant
     $descripcion = $_POST["descripcion"];
     $cantidad = $_POST["cantidad"];
 
-    $dsn = "mysql:$DB_HOST=$DB_HOST;dbname=$DB_DATABASE";
+    $dsn = "mysql:host=$DB_HOST;dbname=$DB_DATABASE";
     $dbh = new PDO($dsn, $DB_USERNAME, $DB_PASSWORD);
 
     $stmt = $dbh->prepare("SELECT id FROM users WHERE username = :username");

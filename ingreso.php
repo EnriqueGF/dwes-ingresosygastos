@@ -2,7 +2,7 @@
 require_once('db.php');
 session_start();
 if (!isset($_SESSION["logged"])) {return;}
-if (isset($_POST["fecha"]) && isset($_POST["descripcion"]) && isset($_POST["cantidad"]) && $_SESSION["logged"]) {
+if (isset($_POST["fecha"]) && isset($_POST["descripcion"]) && isset($_POST["cantidad"])) {
 
     $usuario = $_SESSION["username"];
     $fecha = $_POST["fecha"];
